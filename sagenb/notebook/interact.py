@@ -152,9 +152,8 @@ import math
 import types
 from base64 import standard_b64decode
 
-# Sage libraries
 from sagenb.misc.misc import srange, sage_eval, Color, is_Matrix
-from sage.misc.cachefunc import cached_method
+#from sagenb.misc.cachefunc import cached_method
 
 # SAGE_CELL_ID is a module scope variable that is always set equal to
 # the current cell id (of the executing cell).  Code that sets this is
@@ -2251,9 +2250,9 @@ class UpdateButton(JavascriptCodeButton):
         return self.__var
 
         
-from sage.misc.misc import decorator_defaults
+#from sage.misc.misc import decorator_defaults
 
-@decorator_defaults
+#@decorator_defaults
 def interact(f, layout=None, width='800px'):
     r"""
     Use interact as a decorator to create interactive Sage notebook
@@ -3152,7 +3151,7 @@ class slider_generic(control):
         self.__vmax = vmax
         self.__step_size = step_size
 
-    @cached_method
+#    @cached_method
     def values(self):
         """
         Returns list of values that this slider takes on, in order.
@@ -3289,7 +3288,7 @@ class slider(slider_generic):
             self.label(), self.values()[0],
             self.values()[self.default_index()], self.values()[-1])
 
-    @cached_method
+#    @cached_method
     def default_index(self):
         """
         Return default index into the list of values.
@@ -3407,7 +3406,7 @@ class range_slider(slider_generic):
             self.values()[self.default_index()[0]], 
             self.values()[self.default_index()[1]], self.values()[-1])
     
-    @cached_method
+#    @cached_method
     def default_index(self):
         """
         Return default index into the list of values.
